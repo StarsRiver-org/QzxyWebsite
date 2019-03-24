@@ -1,10 +1,11 @@
 <!--使用通用模板-->
-{extend name="default/portal/frame" /}
+{extend name="mobile/portal/frame" /}
 
 <!--特殊样式-->
 {block name="style"}
-<link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/portal/gxyx.css"/>
 <link rel="stylesheet" href="{$Think.const.STATIC_ROOT}/css/lightslider.min.css">
+<link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/mobile/m_portal/m-gxyx.css">
+<link href="{$Think.const.STATIC_ROOT}/css/mobile/m_home/banner.css" rel="stylesheet">
 {/block}
 
 <!--js模块-->
@@ -21,68 +22,75 @@
 
 <!--主体部分-->
 {block name="body"}
-		{include file="default/portal/gxyx/gxyx_bn" /}
+		{include file="mobile/portal/gxyx/gxyx_bn" /}
 		<div class="o__main">
 			<div class="gxyx">
 				<div class="container">
-					<!-- 这里我把左右看成一个整体，然后用右侧的栏目名称来命名这个大块 -->
-					<section class="gxNews">
-						<div class="gxNews">
-							<div class="leftBox">
-								<div class="sliderBox">
-									<ul class="sliderMain">
-										{if isset($threadlist['new'])}
-										{volist name="threadlist.new" id="t" length="6"}
-										<li>
-											<img src="{$t.coverimg}" />
-											<div>
-											    <a href="/threads/view?id={$t.id}&from=7">{$t.title}</a>
-											</div>
-										</li>
-										{/volist}
-										{/if}
-									</ul>
-									<script>
-										$(document).ready(function() {
-											$('.sliderMain').lightSlider({
-												gallery: false,
-												item: 1,
-												slideMargin: 0,
-												speed: 1000,
-												pause: 5000,
-												auto: true,
-												loop: true,
-												mode: 'slide',
-											});
-											$('.lSPager').addClass('opacity');
-										});
-									</script>
-								</div>
-							</div>
-
-							<div class="rightList">
-								<div class="rightListBox">
-									<div class="rightColumnName">
-										<a >最新资讯</a>
-									</div>
-									<div class="rightListContent">
-										<ul>
-											{if isset($threadlist['new'])}
-											{volist name="threadlist.new" id="t" offset="6" length="12"}
-											<li><a href="/threads/view?id={$t.id}&from=7">{$t.title}</a></li>
-											{/volist}
-											{/if}
-										</ul>
-									</div>
-								</div>
+					<!--移动端-->
+					<div id="m_main">
+						<div class="fullwidthbanner-container">
+							<div class="fullwidthbanner">
+								<ul id="m_img_link">
+									{if isset($threadlist['new'])}
+									{volist name="threadlist.new" id="t" length="6"}
+									<li data-transition="slideright">
+										<img src="{$t.coverimg}" alt="" />
+										<div class="m_img_cover"></div>
+									</li>
+									{/volist}
+									{/if}
+								</ul>
+								<div class="tp-bannertimer tp-bottom"></div>
 							</div>
 						</div>
-					</section>
+						<section id="testiomonial" class="testimonial">
+							<div class="main_testimonial_area">
+								<div class="overlay"></div>
+								<div class="information-container">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="head_title m-y-3 p-t-2  wow fadeInUp">
+												<div class="row">
+													<div class="col-md-4">
+														<h2>最新资讯</h2>
+													</div>
+													<div class="col-md-8">
+		
+														<div class="rightList" id="rightList">
+															<div class="rightListBox">
+																<div class="rightColumnName"></div>
+																<div class="rightListContent">
+																	<ul>
+																		{if isset($threadlist['new'])}
+																		{volist name="threadlist.new" id="t" offset="6" length="12"}
+																		<li><a href="/threads/view?id={$t.id}&from=7">{$t.title}</a></li>
+																		{/volist}
+																		{/if}
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="testimonial_content text-center p-y-3 m-b-3">
+												<div class="test_slider">
+													<div class="single_test">
+														<a href="#">查看更多</a>
+													</div>
+												</div>
+											</div>
+										</div> <!-- End off col-md-12 -->
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
 					<section class="gxHistory">
 						<div class="gxHistory">
 							<div class="leftBox">
 								<div class="leftColumnName">
-									<a >国学入门</a>
+									<a>国学入门</a>
 								</div>
 								<div class="leftColumnContent">
 									<div class="leftCardBox">
@@ -92,7 +100,7 @@
 											<a href="/threads/view?id={$t.id}&from=7" class="CardCoverimg"><img src="{$t.coverimg}" alt=""></a>
 											<div class="CardIntro">
 												<a href="/threads/view?id={$t.id}&from=7" class="Intro_tit">{$t.title}</a>
-												<a href="/threads/view?id={$t.id}&from=7" class="Intro_des">{$t.descrip}</a>
+												<a href="/threads/view?id={$t.id}&from=7" class="Intro_des phoneNone">{$t.descrip}</a>
 											</div>
 										</div>
 										{/volist}
@@ -109,10 +117,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="rightList">
+							<div class="rightList phoneNone">
 								<div class="rightListBox">
 									<div class="rightColumnName">
-										<a >历史春秋</a>
+										<a>历史春秋</a>
 									</div>
 									<div class="rightListContent">
 										<ul>
@@ -130,8 +138,8 @@
 					<section class="gxCulture">
 						<div class="gxCulture">
 							<div class="leftBox">
-								<div class="leftColumnName">
-									<a >国学宝典</a>
+								<div class="leftColumnName" style="font-weight:bold">
+									<a>国学宝典</a>
 								</div>
 								<div class="leftColumnContent">
 									<div class="leftBookBox">
@@ -149,7 +157,7 @@
 							<div class="rightList">
 								<div class="rightListBox">
 									<div class="rightColumnName">
-										<a >礼乐文明</a>
+										<a>礼乐文明</a>
 									</div>
 									<div class="rightCardBox">
 										{if isset($threadlist['civilize'])}
@@ -181,7 +189,7 @@
 						<div class="gxNetResources">
 							<div class="leftBox">
 								<div class="leftColumnName">
-									<a >百家争鸣</a>
+									<a>百家争鸣</a>
 								</div>
 								<div class="leftColumnContent">
 									<div class="leftCardBox">
@@ -191,7 +199,7 @@
 											<a href="/threads/view?id={$t.id}&from=7" class="CardCoverimg"><img src="{$t.coverimg}" alt=""></a>
 											<div class="CardIntro">
 												<a href="/threads/view?id={$t.id}&from=7" class="Intro_tit">{$t.title}</a>
-												<a href="/threads/view?id={$t.id}&from=7" class="Intro_des">{$t.descrip}</a>
+												<a href="/threads/view?id={$t.id}&from=7" class="Intro_des phoneNone">{$t.descrip}</a>
 											</div>
 										</div>
 										{/volist}
@@ -208,10 +216,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="rightList">
+							<div class="rightList phoneNone">
 								<div class="rightListBox">
 									<div class="rightColumnName">
-										<a >同道中人</a>
+										<a>同道中人</a>
 									</div>
 									<div class="rightColumnContent">
 										<div class="rightPeopleBox">
@@ -232,4 +240,28 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="{$Think.const.STATIC_ROOT}/js/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="{$Think.const.STATIC_ROOT}/js/jquery.themepunch.plugins.min.js"></script>
+		<script>
+			//清泽专题轮播图
+			$(document).ready(function () {
+				if ($.fn.cssOriginal != undefined)
+					$.fn.css = $.fn.cssOriginal;
+				$('.fullwidthbanner').revolution({
+					delay: 9000,
+					startwidth: 1170,
+					startheight: 420,
+					onHoverStop: "on",
+					navigationType: "none",
+					soloArrowLeftHOffset: 0,
+					soloArrowLeftVOffset: 0,
+					soloArrowRightHOffset: 0,
+					soloArrowRightVOffset: 0,
+					touchenabled: "on",
+					fullWidth: "on",
+					shadow: 0
+				});
+			});
+			//]]>
+		</script>
 {/block}
