@@ -1,0 +1,151 @@
+body{
+    background: #fdf7f7;
+}
+.listRightContent{
+    padding-left: 2%;
+    padding-right:2%;
+}
+.listRightItem
+{
+    height:170px;
+}
+.m__inputblock
+{
+    width: 100%;
+    height:40px;
+    padding-bottom: 20px;
+    padding-left: 4%;
+    display:inline-block;
+    position: relative;
+    margin-top: 20px;
+}
+#m__search
+{
+    display:inline-block;
+    width:72%;
+    height:46px;
+    background: #fdf7f7;
+    border-color:black;
+    border-width: 2px;
+    border-right: 0px !important;
+    border:2px solid black;
+    border-width: 2px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.m__sousuo
+{
+    position: absolute;
+    display:inline-block;
+    width:22%;
+    height:50px;
+    background: #fff;
+    border-color:black;
+    border-width: 2px;
+    border-left: 0px !important;
+    border:2px solid black;
+    border-width: 2px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color:red;
+    font-size:26px;
+    padding-left: 10px;
+}
+.listRightItem__coverimg
+{
+    float: right;
+    height:100px;
+}
+.listRightItem__content
+{
+    width: 100%;
+}
+a
+{
+    text-decoration: none;
+}
+.listRightItem__tit p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    white-space: nowrap;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #3f3d3e;
+    font-size: 20px;
+    width: 78%;
+    margin-top: 20px;
+}
+.m__content p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #777474;
+    font-size:18px;
+    margin-top: 20px;
+}
+hr{
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    background:#eeeeee;
+}   
+.m__date
+{
+    display:inline-block;
+    width: 100%;
+    position: relative;
+    color: #585353;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.listRightItem__date
+{
+    display:inline-block;
+    margin-left: 20px;
+    position: relative;
+}
+.m__sign{
+    display: inline-block;
+    margin-left: 50%;
+    position: relative;
+    margin-top: -20px;
+    
+}
+.spano
+{
+    right: 20px;
+}
+.iconimg
+{
+    display: -webkit-inline-box;
+    width: 16px;
+    height:12px;
+    margin-top: 2px;
+    margin-right: 4px;
+}
+.bottomfirst
+{
+    width: 34%;
+    height: 40px;
+    background: #fdf7f7;
+    margin-left: 5%;
+    border-radius:6px;
+    border-width: 1px; 
+    font-size:16px; 
+    border: 2px solid #664712;
+    margin-bottom:40px;
+    margin-top: 20px;
+    color:#412705;
+}
+
+.spaner
+{
+    padding-left:4%;
+}
+html{
+    font-size: 16px;
+}

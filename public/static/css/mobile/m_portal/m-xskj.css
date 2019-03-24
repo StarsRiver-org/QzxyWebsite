@@ -1,0 +1,444 @@
+.bannerImgBox img{
+    max-width: none;
+    min-width: 100%;
+}
+
+.bannerImgBox img {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-left: -50%;
+    margin-left: 0rem;
+}
+
+.o__main .container {
+    padding:0;
+    width:auto;
+}
+
+/*最新资讯*/
+.main_figur {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main_testimonial_area {
+    background: url(../../../../static/img/portal/home/kejialert.jpg) no-repeat top center;background-size: cover;
+    position: relative;}
+.overlay {
+    background: rgba(32, 88, 36, 0.9);
+    color: #e75ef2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.information-container {
+    padding-right: .9375rem;
+    padding-left: .9375rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.information-container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+.information-container .row {
+    margin-left: -1.40rem;
+    margin-right: -0.75rem;
+}
+.row {
+    margin-bottom: 0;
+}
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+.col-md-12{
+    position: relative;
+    min-height: 1px;
+    /*padding-right: .9375rem;*/
+}
+.head_title {
+    width: 80%;
+    margin: 0 auto;
+}
+.col-md-4{
+    position: relative;
+    min-height: 1px;
+    text-align: center;
+    /*padding-right: .9375rem;*/
+    /*padding-left: .9375rem;*/
+}
+.col-md-8{
+    position: relative;
+    min-height: 1px;
+    /*padding-right: .9375rem;*/
+    padding-left: .9375rem;
+    border-left: 2px solid rgba(255,255,255,0.5);
+}
+.main_testimonial_area .head_title h6 {
+    color:rgba(255,255,255,0.8);
+}
+.head_title h6 {
+    padding-left: 55px;
+}
+.head_title h4 {
+    /*padding-left: 50px;*/
+    display: inline-block;
+    font-weight: 400;
+}
+h6 {
+    font-size: 1.000rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: STHeiti;
+}
+.p-y-3 {
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: .9375rem;
+}
+.m-b-3 {
+    margin-bottom: 3rem !important;
+}
+.text-center {
+    text-align: center;
+}
+.main_testimonial_area .head_title h2 {
+    color: rgba(255,255,255,0.8);
+}
+.head_title h2 {
+    line-height: 4rem;
+    font-weight:400;
+    font-size: 2.043rem;
+    margin: 0;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.col-md-4-txt{
+    color: rgba(149,195,155);
+    line-height: 4rem;
+    font-weight:600;
+    font-size: 26px!important;
+    width: 150px!important;
+    margin: 0;
+    padding-bottom: 3rem;
+    text-align: center;
+    background: none!important;
+}
+.col-md-4-line{
+    display:none;
+    width: 72px!important;
+    border-top: 1px solid rgba(219,226,220,0.6) !important;
+    vertical-align: text-top;
+    background:none!important;
+}
+.p-t-2 {
+    padding-top: 2rem !important;
+}
+.single_test a{
+    color:rgba(221,240,213,0.8);
+    font-size: 16px;
+    height: 36px;
+    width: 100px;
+    line-height: 36px;
+    padding: 0 15px;
+    border: 1px rgba(255,255,255,0.7) solid;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+}
+.messageItem_msg{
+    padding-left: 55px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family:'STHeiti';
+}
+.span-1{
+    display:block;
+    color: #fff;
+    font-size: 35px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.span-2{
+    display:block;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+}
+.messageItem_date{
+    margin-bottom: -49px;
+}
+.messageItem{
+    padding: 1.5rem 0;
+}
+.rightListContent ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.rightListContent ul li{
+    width: 100%;
+    display:block;
+}
+.rightListContent ul li a{
+    color: rgba(221,240,213,1);
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*科技竞赛*/
+.szExploration {
+    width: 100%;
+    background: #fff;
+}
+
+.m_container {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.m_title {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+    padding-top: 26px;
+    position: relative;
+}
+
+.m_title_line {
+    width: 100%;
+    height: 1px;
+    background: #bed9be;
+    margin-top: -0.7rem;
+}
+
+.m_title_p {
+    font-size: 26px;
+    font-weight: 600;
+    width: 140px;
+    background: #fff;
+    color: #275c29;
+    position: absolute;
+    top: 0;
+    margin-left: 23%;
+    padding: 0 10px;
+}
+
+.rightColumnName {
+    height: 30px;
+    width: 100%;
+}
+
+.rightColumnName span {
+    width: 33.33%;
+    display: inline-block;
+    text-align: center;
+    background:#fff;
+    color: #275c29;
+    font-size: 18px;
+    font-weight: 600;
+    height: 30px;
+}
+
+.m_tab .rightListContent {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 18px;
+    background: #fff;
+    padding: 26px 10px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.m_tab .rightListContent li {
+    list-style: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.span_open{
+    background: #c2fad0a1 !important;
+    border-radius: 10px;
+}
+
+.rightContentImg{
+    margin-top: 20px;
+    position: relative;
+}
+
+.rightContentImg img{
+    max-width: 100%;
+    border-radius: 30px;
+}
+
+.m_ContentImg_cover{
+    background-color: #1b1b1b;
+    width: calc(100%);
+    height: 35px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    opacity: 0.5;
+    z-index: 2;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+.m_ContentImg_cover a{
+    color: rgba(255,255,255,0.9);
+    vertical-align: sub;
+}
+.rightListContent-kjjs ul li a{
+    color:rgba(74,120,77,0.9);
+    font-weight: 400;
+}
+/*清泽讲堂*/
+#m_xsCompetiton_teach{
+    padding-top: 30px;
+}
+.m_xsCompetiton_teach .rightList .rightListImg img{
+    max-width: 100%;
+    border-radius: 15px;
+    height: 150px;
+    width: 100%;
+}
+.m_ContentImg_cover_qzxjt a{
+    color: rgba(255,255,255,0.9);
+    vertical-align: sub;
+}
+.m_ContentImg_cover_qzxjt{
+    background-color: #1b1b1b;
+    width: calc(100%);
+    height: 35px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    opacity: 0.5;
+    z-index: 2;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    bottom: 0;
+    margin-top: -35px;
+}
+.CardIntroXJT{
+    padding-top: 2.3rem;
+}
+/*科技成果*/
+a:hover{
+    -webkit-tap-highlight-color: transparent;
+}
+
+.listContent{
+    margin: 0 2%;
+}
+
+.index-banner-text .text-info{
+    text-align: center;
+    color: #1b813e;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.index-banner-text .text-info .line{
+    display: inline-block;
+    width: 80px;
+    border-top: 1px solid #bed9be;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+.index-banner-text .txt{
+    color: #275c29;
+    font-size: 26px;
+}
+
+.listContentItem{
+    margin-top: 30px;
+}
+
+.itemTitle{
+    color: #275c29;
+    font-size: 20px;
+}
+
+.itemTitle a:hover{
+    color: #ff0000;
+}
+
+.itemInfo{
+    color: #669367;
+    font-size: 18px;
+    /*margin-top: -14px;
+    margin-bottom: -16px;*/
+    margin-top: 2px;
+    margin-bottom: -5px;
+}
+
+.listContentItem .itemInfoFooter{
+    display: inline-block;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    color: #9bc09c;
+}
+
+.listContentItem .itemInfoFooter .index-panel-prise-info{
+    display: inline-block;
+    margin-left: 57%;
+    margin-top: 20px;
+}
+
+.listContentItem .index-panel-time{
+    display: inline-block;
+}
+
+.listContentItem .itemInfoFooter .index-panel-prise-img{
+    display: inline-block;
+    position: absolute;
+    margin-left: -600px;
+    margin-top: -544px;
+    transform: scale(0.012);
+    -ms-transform:scale(0.012);
+    -moz-transform:scale(0.012);
+    -o-transform:scale(0.012);
+    -webkit-transform:scale(0.012);
+}
+
+.listContentItem .index-panel-prise{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.line-1{
+    border-top: 1px solid #bed9be;
+    width: 100%;
+    opacity: 0.5;
+    margin-top: 20px;
+}
+
+.m_footer_kjcj{
+    margin-bottom: 80px;
+}

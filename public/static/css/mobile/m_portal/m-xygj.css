@@ -1,0 +1,436 @@
+﻿.bannerImgBox img{
+    max-width: none;
+    min-width: 100%;
+}
+
+.bannerImgBox img {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-left: -50%;
+    margin-left: 0rem;
+}
+
+.o__main .container {
+    padding: 0;
+    width:100%;
+}
+
+/*最新资讯*/
+.main_figur {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main_testimonial_area {
+    background: rgba(32, 88, 36, 0.8);
+    position: relative;}
+.overlay {
+    background: rgba(32, 88, 36, 0.8);
+    color: #e75ef2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.information-container {
+    padding-right: .9375rem;
+    padding-left: .9375rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.information-container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+.information-container .row {
+    margin-left: -1.40rem;
+    margin-right: -0.75rem;
+}
+.row {
+    margin-bottom: 0;
+}
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+.col-md-12{
+    position: relative;
+    min-height: 1px;
+    /*padding-right: .9375rem;*/
+}
+.head_title {
+    width: 80%;
+    margin: 0 auto;
+}
+.col-md-4{
+    position: relative;
+    min-height: 1px;
+    text-align: center;
+    /*padding-right: .9375rem;*/
+    /*padding-left: .9375rem;*/
+}
+.col-md-8{
+    position: relative;
+    min-height: 1px;
+    /*padding-right: .9375rem;*/
+    padding-left: .9375rem;
+    border-left: 2px solid rgba(255,255,255,0.5);
+}
+.main_testimonial_area .head_title h6 {
+    color:rgba(255,255,255,0.8);
+}
+.head_title h6 {
+    padding-left: 55px;
+}
+.head_title h4 {
+    /*padding-left: 50px;*/
+    display: inline-block;
+    font-weight: 400;
+}
+h6 {
+    font-size: 1.000rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: STHeiti;
+}
+.p-y-3 {
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: .9375rem;
+}
+.m-b-3 {
+    margin-bottom: 3rem !important;
+}
+.text-center {
+    text-align: center;
+}
+.main_testimonial_area .head_title h2 {
+    color: rgba(255,255,255,0.8);
+}
+.head_title h2 {
+    line-height: 4rem;
+    font-weight:400;
+    font-size: 2.043rem;
+    margin: 0;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.col-md-4-txt{
+    color: rgba(219,226,220,1);
+    line-height: 4rem;
+    font-weight:400;
+    font-size: 2.043rem;
+    margin: 0;
+    padding-bottom: 2rem;
+    text-align: center;
+    vertical-align: middle;
+}
+.col-md-4-line{
+    display: inline-block;
+    width: 72px;
+    border-top: 1px solid rgba(219,226,220,0.6) ;
+    vertical-align: middle;
+}
+.p-t-2 {
+    padding-top: 2rem !important;
+}
+.single_test a{
+    color:rgba(221,240,213,0.8);
+    font-size: 16px;
+    height: 36px;
+    width: 100px;
+    line-height: 36px;
+    padding: 0 15px;
+    border: 1px rgba(255,255,255,0.7) solid;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+}
+.messageItem_msg{
+    padding-left: 55px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family:'STHeiti';
+}
+.span-1{
+    display:block;
+    color: #fff;
+    font-size: 35px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.span-2{
+    display:block;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+}
+.messageItem_date{
+    margin-bottom: -49px;
+}
+.messageItem{
+    padding: 1.5rem 0;
+}
+.rightListContent ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.rightListContent ul li{
+    width: 100%;
+    display:block;
+}
+.rightListContent ul li a{
+    color: rgba(221,240,213,1);
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*学院揽胜*/
+.o__main .fullBox .fullColumnName a, .o__main .xyIntroduct  .leftBox .leftColumnName a{
+    text-align: left;
+}
+.o__main .fullBox .fullColumnContent, .o__main .xyIntroduct  .leftBox .leftColumnContent{
+    margin-top: 48px!important;
+}
+.xyIntroduct  .mobile-header{
+    font-size: 26px;
+}
+.o__main .fullBox .fullColumnName a, .o__main .xyIntroduct  .leftBox .leftColumnName a{
+    border-bottom: none !important;
+}
+.o__main .container{
+    background-color: #f9fcf7;
+    width: 100% !important;
+}
+.o__main .xyIntroduct  .leftBox .leftColumnContent .leftListBox ul li a{
+    font-size: 16px;
+}
+.o__main .fullBox .fullColumnName, .o__main .xyIntroduct  .leftBox .leftColumnName{
+    margin: 0 auto ;
+    margin-top: 30px;
+    border-bottom: none  !important;
+}
+.o__main .fullBox .fullColumnName a, .o__main .xyIntroduct  .leftBox .leftColumnName a{
+    font-size: 26px !important;
+    position: absolute;
+    left: 36%;
+}
+.o__main .xyIntroduct  .leftBox .leftColumnContent .leftCardBox .leftCardItem .CardCoverimg img{
+    border-radius: 10px;
+}
+.o__main .xyIntroduct   .leftBox .leftColumnContent .leftCardBox, .o__main .leftBox .leftColumnContent .leftListBox{
+    margin-left: 0;
+    margin-top: 50px;
+    display: block !important;
+}
+
+.o__main .fullBox .fullColumnName, .o__main .xyIntroduct  .leftBox .leftColumnName{
+    text-align: center;
+}
+.xyIntroduct  .left-l{
+    border-top: #bed9be 1px solid;
+    position: absolute;
+    left: 16%;
+    top: 58px;
+    width: 60px;
+    display: inline-block;
+}
+.o__main .xyIntroduct  .leftBox .leftColumnContent .leftCardBox .leftCardItem{
+    width: 100% !important;
+    height: 210px;
+}
+
+.xyIntroduct  .right-l{
+    border-top: #bed9be 1px solid;
+    position: absolute;
+    left: 70%;
+    top: 58px;
+    width: 60px;
+    display: inline-block;
+}
+.o__main .xyIntroduct  .leftBox .leftColumnContent .leftCardBox, .o__main .leftBox .leftColumnContent .leftListBox{
+    margin-top: 26px !important;
+    margin-bottom: 26px;
+}
+
+.o__main .xyIntroduct  .leftBox .leftColumnContent .leftCardBox .leftCardItem .CardIntro{
+    background-color: #1b1b1b;
+    width: 94%!important;
+    margin-right:0 !important;
+    margin-bottom: 0 !important;
+    height: 30px;
+    position: relative;
+    margin-left: 3%;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    top: -32px;
+    opacity: 0.5;
+    z-index: 2;
+    text-align: left !important;
+    color: #f6f0f0 !important;
+    display: block;
+}
+
+.o__main .xyIntroduct  .rightList .rightListBox .rightColumnName{
+    width: 100% !important;
+}
+
+.o__main .xyIntroduct  .leftBox .leftColumnContent .leftCardBox .leftCardItem .CardIntro .Intro_tit{
+    margin-right:0 !important;
+    margin-bottom: 0 !important;
+    position: relative;
+    top: 0;
+    text-align: left !important;
+    color:  #f6f0f0 !important;
+    display: block;
+    font-size: 20px;
+    max-width: none;
+    margin-left: 12px;
+}
+.o__main .xyIntroduct   .leftBox .leftColumnContent .leftListBox ul li{
+    padding: 0;
+}
+.o__main .xyIntroduct  .leftBox .leftColumnContent .leftCardBox .leftCardItem:first-child{
+    padding-bottom: 0 !important;
+}
+
+.o__main .xyIntroduct   .leftBox{
+    width:100%;
+    background-color: #f9fcf7 !important;
+}
+.o__main .xyIntroduct  .leftBox .leftColumnContent .leftCardBox .leftCardItem .CardCoverimg img{
+    margin: 0 auto;
+    height: 210px;
+    width: 94% !important;
+}
+
+
+.o__main .xyIntroduct  .leftBox .leftColumnContent .leftCardBox .leftCardItem .CardIntro .Intro_des{
+    display: none !important;
+}
+.o__main .xyIntroduct  .rightList .rightListBox .rightColumnName span{
+    font-size: 26px;
+}
+.o__main .xyIntroduct  .rightList .rightListBox .rightListContent{
+    background-color:#4b794e ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.o__main .xyIntroduct  .rightList .rightListBox .rightListContent ul li a{
+    color: #f9fcf7 ;
+    font-size: 16px;
+}
+
+.o__main .xyIntroduct  .rightList .rightListBox .rightListContent ul{
+    margin-left: 12px;
+}
+div.xyIntroduct{
+    padding-bottom: 30px !important;
+}
+.xyIntroduct  .mobile-header{
+    position: absolute;
+    left: 40%;
+}
+.o__main .container  {
+    padding: 0 0 !important;
+}
+.xyIntroduct  .leftCardItem1{
+    display: none;
+}
+
+.o__main .xyIntroduct  .rightList {
+    margin-top: 34px;
+    width: 94% !important;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 10px;
+
+}
+.xyIntroduct  .m-ri-current{
+    border-top-left-radius: 10px;
+}
+.xyIntroduct  .m-ri-current1{
+    border-top-right-radius: 10px;
+}
+
+.o__main .xyIntroduct .fullBox .fullColumnName, .o__main .xyIntroduct .leftBox .leftColumnName {
+    padding-bottom: 11px;
+}
+
+.o__main .xyIntroduct .leftBox .leftColumnContent .leftListBox ul li {
+    display: block;
+    margin-bottom: 12px;
+    padding-left: 22px;
+}
+
+.o__main .xyIntroduct .leftBox .leftColumnContent .leftListBox ul li a {
+    position: relative;
+    padding-left: 22px;
+    font-weight: 600;
+    width: max-content;
+    max-width: 230px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top:24px;
+}
+
+
+.o__main .xyIntroduct .rightList {
+    height: 100%;
+}
+
+.o__main .xyIntroduct .rightList .rightListBox .rightColumnName {
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: -5px;
+}
+
+.o__main .xyIntroduct .rightList .rightListBox .rightColumnName .ri-current {
+    color: #1e7044 !important;
+    background: #aae3c4 !important;
+}
+
+.o__main .xyIntroduct .rightList .rightListBox .rightColumnName span {
+    height: 40px;
+    display: inline-block;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    width: 49.4%;
+    border: 1px solid #e1f4e7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.o__main .xyIntroduct .rightList .rightListBox .rightListContent {
+    padding: 18px 0;
+    border: 1px solid #e1f4e7;
+    box-shadow: 0 2px 0 2px rgba(0, 0, 0, .02);
+    border-top: none;
+}
+
+.testimonial .information-container .rightList .rightListBox .rightListContent{
+    margin-top:32px;
+}

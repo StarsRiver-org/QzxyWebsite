@@ -1,0 +1,215 @@
+﻿.bannerImgBox img {
+    max-width: none;
+    min-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.szExploration {
+    width: 100%;
+    background: #c6252b;
+}
+
+.m_container {
+    width: 96%;
+    margin: 0 auto;
+    background: url(../../../../static/img/portal/sztd/start_2x.png) no-repeat;
+}
+
+.m_title {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+}
+
+.m_title_line {
+    width: 200px;
+    height: 2px;
+    background: #d48a8d ;
+    margin: 0 auto;
+}
+
+.m_title_p {
+    font-size: 30px;
+    background: #c6252b;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    margin-left: 28%;
+    padding: 0 10px;
+}
+
+.rightColumnName {
+    height: 30px;
+    width: 100%;
+}
+
+.m_tab {
+    margin-top: 50px;
+}
+
+.rightColumnName span {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    background: #c6252b;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    height: 42px;
+}
+
+.m_tab .rightListContent {
+    margin-top: 10px;
+    color: #fff;
+    background: #d65c60a1;
+    padding: 20px 10px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    font-size: 16px;
+}
+
+.m_tab .rightListContent li {
+    margin-top: 12px;
+    list-style: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 20px;
+}
+
+.span_open {
+    background: #d65c60a1 !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.o__main .container {
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+/*理论*/
+#m_lilun{
+    background: #c6252b;
+    position: relative;
+}
+
+.star_llts {
+    position: absolute;
+    width: 150px;
+    height: 128px;
+}
+
+.lltsListBox{
+    height: auto;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+.lltsBox {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.left-l {
+    border-top: #d48a8d 1px solid;
+    margin-right: 16px;
+    margin-bottom: 8px;
+    width: 60px;
+    display: inline-block;
+}
+
+.right-l {
+    border-top: #d48a8d 1px solid;
+    margin-left: 16px;
+    margin-bottom: 8px;
+    width: 60px;
+    display: inline-block;
+}
+
+
+.lltsBox .lltsColumnName {
+    text-align: center;
+}
+
+.lltsBox .lltsColumnName b {
+    font-size: 26px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 30px;
+
+}
+
+.lltsBox .lltsColumnContent .lltsCardBox .lltsCardItem .lltsCardCoverimg {
+    display: block;
+    background: url(../../../../static/img/portal/gxyx/GXruimenSM.png) no-repeat center center;
+    background-size: contain;
+    /*在宽度呈百分比时，图片大小由高度决定，图片不同*/
+}
+
+.lltsBox .lltsColumnContent .lltsCardBox .lltsCardItem .lltsCardCoverimg img{
+    width: 98%;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 3.7px;
+}
+
+.lltsBox .lltsColumnContent {
+    width: 98%;
+    background: rgba(238, 238, 238, 0.15);
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10.4px;
+}
+
+.lltsBox .lltsColumnContent .lltsCardBox .lltsCardIntro {
+    background: #1b1b1b;
+    width: 98%;
+    height: 34px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    opacity: 0.5;
+    margin: 0 auto;
+    margin-top: -34px;
+    /*遮罩层上移的高度*/
+}
+
+.lltsBox .lltsColumnContent .lltsCardBox .lltsCardIntro .lltsIntro_tit {
+    font-size: 22px;
+    color: #fdf7f7;
+    margin-left: 20px;
+}
+
+.lltsListBox ul,
+li {
+    list-style: none;
+    padding: 0;
+    display: block;
+    margin-left: 3%;
+}
+
+.lltsListBox li {
+    margin-bottom: 20px;
+}
+
+.lltsListBox li a {
+    color: #fdf7f7;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.szExploration .m_container .m_title .m_title_p p{
+     font-size:26px;
+}

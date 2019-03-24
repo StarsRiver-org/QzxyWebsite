@@ -1,0 +1,66 @@
+.o__main .container{
+    width:100%;
+    padding-left: 16px;
+}
+
+.o__main .container .listContent{
+    width: 90%;
+}
+
+.o__main .container .listContent .listContentItem{
+    margin-right: 0;
+}
+
+.o__main .container .listContent .listContentItem .coverimg{
+    height: 100px;
+}
+
+.o__main .container .listContent .listContentItem .itemTitle a{
+    font-size: 10px;
+}
+
+.o__main .container .listContent .listContentItem .itemInfoFooter span{
+    font-size: 12px;
+}
+
+.o__main .container .pager.pager-pills{
+    margin-top: 0;
+    width:90%;
+    margin-left: 0;
+    padding-bottom: 0;
+    background-color: #d2dce6;
+    opacity: 0.6;
+}
+
+.o__main .container .pager.pager-pills li{
+    padding-right: 10px;
+    padding-top: 10px;
+    border: none;
+    margin-right: 0;
+}
+
+.o__main .container .pager.pager-pills .disabled,.o__main .container .pager.pager-pills .next,.o__main .container .pager.pager-pills .previous{
+    display: none;
+}
+
+/*------------search--------css----------*/
+.o__searchBar .container{
+    width:90%;
+}
+
+.o__searchBar .container .searchBox .searchContent input{
+    height: 30px;
+    width:200px;
+    font-size: 16px;
+}
+
+.o__searchBar .container .searchBox .searchbtn{
+    height: 30px;
+    width:70px;
+    background-color: #fb4448;
+    font-size: 12px;
+}
+
+.o__searchBar{
+    background-color: #ece0e070;
+}

@@ -1,0 +1,328 @@
+﻿.bannerImgBox img{
+    max-width: none;
+    min-width:100%;
+}
+
+.bannerImgBox img {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-left: 0rem;
+}
+
+.rightList{
+    width:94% !important;
+    margin: 0 auto !important;
+}
+
+.main_figur {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main_testimonial_area {
+    background: url(../../../img/portal/gxyx/gxyxbg.png) no-repeat top center;background-size: cover;
+    position: relative;}
+.o__main .overlay {
+    background: rgba(104, 64, 53, 1) !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.information-container {
+    padding-right: .9375rem;
+    padding-left: .9375rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.information-container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+.information-container .row {
+    margin-left: -1.40rem;
+    margin-right: -0.75rem;
+}
+.row {
+    margin-bottom: 0;
+}
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+.col-md-12{
+    position: relative;
+    min-height: 1px;
+    /*padding-right: .9375rem;*/
+}
+.head_title {
+    width: 80%;
+    margin: 0 auto;
+}
+.col-md-4{
+    position: relative;
+    min-height: 1px;
+}
+.col-md-8{
+    position: relative;
+    min-height: 1px;
+    padding-left: .9375rem;
+    border-left: 2px solid rgba(255,255,255,0.5);
+}
+.main_testimonial_area .head_title h6 {
+    color:rgba(255,255,255,0.8);
+}
+.head_title h6 {
+    padding-left: 55px;
+}
+.head_title h4 {
+    display: inline-block;
+    font-weight: 400;
+}
+h6 {
+    font-size: 1.000rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: STHeiti;
+}
+.p-y-3 {
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: .9375rem;
+}
+.m-b-3 {
+    margin-bottom: 3rem !important;
+}
+.text-center {
+    text-align: center;
+}
+.main_testimonial_area .head_title h2 {
+    color: #ca2929;
+}
+.head_title h2 {
+    line-height: 4rem;
+    font-weight:400;
+    font-size: 2.043rem;
+    margin: 0;
+    padding-bottom: 2rem;
+}
+.p-t-2 {
+    padding-top: 2rem !important;
+}
+.single_test a{
+    color:#d9b6ab;
+    font-size: 16px;
+    height: 36px;
+    width: 100px;
+    line-height: 36px;
+    padding: 0 15px;
+    border: 1px rgba(255,255,255,0.5) solid;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+}
+.messageItem_msg{
+    padding-left: 55px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family:'STHeiti';
+}
+.span-1{
+    display:block;
+    color: #fff;
+    font-size: 35px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.span-2{
+    display:block;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+}
+.messageItem_date{
+    margin-bottom: -49px;
+}
+.messageItem{
+    padding: 1.5rem 0;
+}
+.rightListContent ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.rightListContent ul li{
+    width: 100%;
+    display:block;
+}
+.rightListContent ul li a{
+    color: #d9b6ab;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.o__main .container {
+    padding: 0;
+    width: auto;
+}
+
+/*国学入门*/
+.leftBox{
+    margin: 0 auto;
+    width: 94%;
+}
+
+.leftColumnName a{
+    color: #582c20	;
+    font-size: 26px;
+    margin-top: 40px;
+    display: block;
+    font-weight:bold;
+}
+
+.leftColumnContent .leftCardBox .leftCardItem .CardCoverimg/*为a标签，即标题下图片*/{
+    display: block;
+    border-radius: 10px;
+    margin-top: 20px; 
+}
+
+.leftColumnContent .leftCardBox .leftCardItem .CardCoverimg img{
+    width: 100%;
+    height: 210px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.leftColumnContent .leftCardBox .leftCardItem .CardIntro{
+    background: #1b1b1b;
+    width: 100%;
+    height: 52px;/**/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: -54px; 
+    opacity: 0.5;
+}
+
+.leftColumnContent .leftCardBox .leftCardItem .CardIntro .Intro_tit/*国学入门书目*/{
+    font-size: 22px;
+    color: #fdf7f7;
+    margin-left: 20px;
+}
+
+.leftListBox{
+    
+    margin-bottom: 80px ;
+}
+
+.leftListBox ul,li{
+    list-style: none;
+    
+    padding: 0;
+
+}
+
+ul{
+    margin-top:48px;
+}
+
+
+ul,li{
+    display: block;
+}
+
+.leftListBox li{
+    margin-bottom: 20px;
+}
+
+.leftListBox li a{
+    color: #937c66;
+    font-size: 16px;
+}
+
+.phoneNone{
+    display: none;
+}
+
+/*国学宝典*/
+.gxCulture .rightList {
+    display: none;
+}
+
+.gxCulture .leftBookBox img{
+    border-radius: 10px;
+    width: 146px;
+    height: 96px;
+}
+
+.gxCulture .leftColumnName{
+    margin-top: 40px;
+}
+
+.gxCulture .leftColumnName a{
+    color: #582c20;
+    font-size: 26px;
+}
+
+.gxCulture .leftBox .leftColumnContent .leftBookBox .leftBookItem a:first-child + a{
+    font-size: 16px;
+    color:#fdf7f7;
+    position: absolute;
+    top: 65px;
+}
+
+.gxCulture .leftColumnContent{
+    margin-top: 30px;
+}
+
+.gxCulture .leftBookBox{
+    width:96%;
+    margin: 0 auto;
+}
+
+.gxCulture .leftBookBox .leftBookItem{
+    display: inline-block;
+    width:40%;
+    margin-right: 30px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.leftBookBox img{
+    border-radius: 10px;
+    width: 146px;
+    height: 96px ;
+}
+
+.m-character{
+    background-color: #1b1b1b;
+    width: 146px;
+    margin-right:0;
+    margin-bottom: 0;
+    height: 30px;
+    position: relative;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    top: -51px;
+    opacity: 0.5;
+    z-index: 2;
+    text-align: left;
+    color: white;
+}

@@ -3,7 +3,7 @@
 /* header & footer */
 .header,
 .footer {
-    background: #94181c !important;
+    background: #94181c;
 }
 
 @media (max-width: 993px) {

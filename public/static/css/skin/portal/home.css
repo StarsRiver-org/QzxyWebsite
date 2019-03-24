@@ -1,4 +1,4 @@
-/* common 另外引入 */
+﻿/* common 另外引入 */
 
 .footer {
 	background-color: #891619;
@@ -109,26 +109,18 @@
 /* 栏目标题 columnName */
 .columnName {
 	margin-bottom: 16px;
-	border-bottom: 2px solid rgb(239, 239, 239);
 }
 .columnName > a:first-child {
 	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: 4.2rem;
 	font-family: "Microsoft YaHei";
-	color: rgb(74, 74, 81);
+	color: rgb(215, 30, 9);
 	line-height: 30px;
-	line-height: 3rem;
-	padding: 0 2px 4px;
-	margin-bottom: -2px;
-	height: 30px;
+	line-height: 1rem;
+	padding: 2px 2px 4px;
+	margin-bottom: 1px;
 	height: 3rem;
 	display: inline-block;
-	border-bottom: 2px solid rgb(137, 22, 25);
-	border-bottom: 0.2rem solid rgb(137, 22, 25);
-}
-.columnName > a:first-child:hover {
-	color: rgb(123, 19, 0);
-    text-decoration: underline;
 }
 .columnName .more {
 	font-size: 12px;
@@ -143,7 +135,7 @@
 	height: 1.6rem;
 	float: right;
 	letter-spacing: 4px;
-	margin-top: 8px;
+	margin-top: -4px;
 	background: url('../../../img/portal/home/formore.png') no-repeat right center;
 }
 .columnName .more:hover {
@@ -156,7 +148,7 @@
 	background: #fef7f8;
 }
 div.qzNews {
-	padding: 44px 0;
+	padding: 120px 0 0 0;
 }
 .qzNews .container .columnName {
     margin-left: 4px;
@@ -165,19 +157,28 @@ div.qzNews {
 .qzNews .container .columnContainer {
 	width: 568px;
 	display: inline-block;
-	margin: auto;
+	margin: 30px auto auto auto;
 }
 .qzNews .container .columnContainer:first-child {
 	margin-right: 100px;
 }
 .qzNews .container .columnContainer .newsItem {
 	display: block;
-	padding: 8px;
+	padding: 11px;
 	margin-left: 10px;
 	border-bottom: 1px solid #eee;
+	height: 90px;
+	position: relative;
+}
+
+.qzNews .container .columnContainer .newsItem1 {
+	display: block;
+	padding: 11px;
+	margin-left: 10px;
 	height: 60px;
 	position: relative;
 }
+
 .qzNews .container .columnContainer .newsItem:before {
 	content: '';
 	position: absolute;
@@ -185,7 +186,8 @@ div.qzNews {
 	left: -4px;
 	width: 4px;
 	height: 4px;
-	background-color: #a44a4d;
+	
+	background-color: #a44a4d;display:none
 }
 .qzNews .container .columnContainer .newsContainer {
 	display: block;
@@ -200,20 +202,58 @@ div.qzNews {
 	display: inline-block;
 	vertical-align: top;
 
-	font-size: 18px;
+	font-size: 15px;
 	font-weight: bold;
 	color: #333;
-	white-space: normal;
+	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	display: block;
 }
+
+.index-panel-prise-info{
+	display: inline-block;
+	right: 1%;
+	margin-top: -20px;
+	position: absolute;
+}
+
+.index-panel-prise-img{
+	display: inline-block;
+	position: absolute;
+	margin-left: -600px;
+	margin-top: -544px;
+	transform: scale(0.012);
+	-ms-transform:scale(0.012);
+	-moz-transform:scale(0.012);
+	-o-transform:scale(0.012);
+	-webkit-transform:scale(0.012);
+}
+
+.index-panel-prise{
+	display: inline-block;
+	margin-left: 24px;
+	margin-top: 2px;
+	font-size: 14px;
+	color: #9d9d9c;
+	overflow: hidden;
+}
+
 .qzNews .container .columnContainer .newsItem .newsItem_tit:hover {
 	color:#891619;
 }
 .qzNews .container .columnContainer .newsItem .newsItem_date {
 	margin-top: 2px;
-	float: right;
-	vertical-align: top;
+	display: block;
+	font-size: 14px;
+	color: #9d9d9c;
+	overflow: hidden;
+}
+
+
+.qzNews .container .columnContainer .newsItem1 .newsItem_date {
+	margin-top: 2px;
+	display: block;
 	font-size: 14px;
 	color: #9d9d9c;
 	overflow: hidden;
@@ -268,8 +308,17 @@ div.qzNews {
 }
 /*main部分(中间三个)*/
 .main {
-	padding: 44px 0;
+	padding: 120px 0 0 0;
 }
+
+.main .overlay{
+	margin-top: 40px;
+}
+
+.row{
+	padding-top: 20px;
+}
+
 /* 信息中心 (qzMessage) */
 .main .container .qzMessage {
 	width: 360px;
@@ -570,7 +619,7 @@ div.qzNews {
 	.main .container .qzVideo {
 		width: 100%;
 		float: none;
-		margin-top: 44px;
+		margin-top: 40px;
 	}
 	.main .container .qzVideo .columnContainer .videoNews .videoNews_pic,
 	.main .container .qzVideo .columnContainer .videoNews .videoNews_pic:first-child + .videoNews_pic {
@@ -767,7 +816,7 @@ div.qzNews {
 	}
 	.main .container .qzVideo .columnContainer .service {
 		width: 80%;
-		margin-top: 20px;
+		margin-top: 40px;
 	}
 	.main .container .qzVideo .columnContainer .service a .serviceItem {
 		width: 130px;
@@ -842,7 +891,7 @@ div.qzNews {
 
 /*校园风光 (qzSights)*/
 div.qzSights {
-	padding: 44px 0;
+	padding: 120px 0;
 }
 .qzSights .container .columnContainer > a {
 	display: inline-block;
@@ -934,3 +983,4 @@ a img {
 	-webkit-transition: opacity .3s ease-in-out;
 	transition: opacity .3s ease-in-out;
 }
+

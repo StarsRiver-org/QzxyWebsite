@@ -1,9 +1,9 @@
-/*平安校园 css*/
+﻿/*平安校园 css*/
 
 /* header & footer */
 .header,
 .footer {
-    background: #1b70b9 !important;
+    background: #1b70b9 ;
 }
 
 @media (max-width: 993px) {
@@ -153,7 +153,7 @@
 /* left&full common */
 .o__main .fullBox .fullColumnName,
 .o__main .leftBox .leftColumnName {
-	padding-bottom: 11px;
+	padding-bottom: 12px;
 	border-bottom: 1px solid #cdcdcd;
 }
 .o__main .fullBox .fullColumnName a,
@@ -163,7 +163,6 @@
 	font-weight: 600;
 	letter-spacing: 4px;
 	color: #4c4c4c;
-	border-bottom: 1px solid #4c4c4c;
 }
 .o__main .fullBox .fullColumnName a:hover,
 .o__main .leftBox .leftColumnName a:hover {
@@ -172,7 +171,7 @@
 }
 .o__main .fullBox .fullColumnContent,
 .o__main .leftBox .leftColumnContent {
-	margin-top: 26px;
+	margin-top: 18px;
 }
 
 /* rightColumnName */
@@ -301,7 +300,7 @@ div.paSlider {
 
 /* paEating */
 div.paEating {
-	padding-bottom: 58px;
+	padding-bottom: 48px;
 }
 /* sp rightColumnName */
 .o__main .rightList .rightListBox .rightColumnName {
@@ -342,12 +341,12 @@ div.paEating {
 	width: 346px;
 }
 .o__main .leftBox .leftColumnContent .leftCardBox .leftCardItem:first-child {
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 	border-bottom: 1px solid #e5d5bd;
 }
-.o__main .leftBox .leftColumnContent .leftCardBox .leftCardItem:first-child + .leftCardItem {
+/*.o__main .leftBox .leftColumnContent .leftCardBox .leftCardItem:first-child + .leftCardItem {
 	padding-top: 30px;
-}
+}*/
 .o__main .leftBox .leftColumnContent .leftCardBox .leftCardItem .CardCoverimg,
 .o__main .leftBox .leftColumnContent .leftCardBox .leftCardItem .CardIntro {
 	display: inline-block;
@@ -357,12 +356,13 @@ div.paEating {
 	width: 160px;
 	height: 120px;
 	background-color: #f5f5f5;
+	border-radius: 16px;
 }
 .o__main .leftBox .leftColumnContent .leftCardBox .leftCardItem .CardIntro {
-	margin-left: 18px;
+	margin-left: 19px;
 }
 .o__main .leftBox .leftColumnContent .leftCardBox .leftCardItem .CardIntro .Intro_tit {
-	font-size: 14px;
+	font-size: 18px;
 	color: #000000;
 	padding-left: 4px;
 	margin-bottom: 10px;
@@ -392,8 +392,10 @@ div.paEating {
 }
 /* paTransporting */
 div.paTransporting {
-	padding-bottom: 58px;
+	padding-bottom: 48px;
+	margin:0 auto;
 }
+.paTransporting{background:#f7f9fc;}
 @media (min-width: 2200px) {
 	.o__main .leftBox .leftColumnContent .leftCardBox .leftCardItem .CardIntro .Intro_tit {
 		width: 158px;
