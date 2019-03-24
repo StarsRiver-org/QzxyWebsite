@@ -1,10 +1,12 @@
 <!--使用通用模板-->
-{extend name="default/portal/frame" /}
+{extend name="mobile/portal/frame" /}
 
 <!--特殊样式-->
 {block name="style"}
 <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/portal/paxy.css"/>
 <link rel="stylesheet" href="{$Think.const.STATIC_ROOT}/css/lightslider.min.css">
+<link rel="stylesheet" href="{$Think.const.STATIC_ROOT}/css/mobile/m_portal/m-paxy.css">
+<link rel="stylesheet" href="{$Think.const.STATIC_ROOT}/css/mobile/m_home/banner.css">
 {/block}
 
 <!--js模块-->
@@ -21,218 +23,247 @@
 
 <!--主体部分-->
 {block name="body"}
-{include file="default/portal/paxy/paxy_bn" /}
-    <div class="o__main">
-    	<div class="paxy">
-    		<div class="container">
-    			<section class="paSlider">
-    				<div class="paSlider">
-    					<div class="leftBox">
-    						<div class="sliderBox">
-    							<ul class="sliderMain">
-                                    {if isset($threadlist['safe'])}
-                                    <?php $safenum = 0; ?>
-                                        {volist name="threadlist.safe" id="t"}
-                                            {if $safenum<=6 && $t['coverimg'] !== '/static/img/common/no-img-1.svg'}
-                                                <?php $safenum +=1; ?>
-                                                <li>
-                                                    <img src="{$t.coverimg}" />
-                                                    <div>
-                                                        <a href="/threads/view?id={$t.id}&from=16">{$t.title}</a>
-                                                    </div>
-                                                </li>
-                                            {/if}
+{include file="mobile/portal/paxy/paxy_bn" /}
+<div class="o__main">
+    <div class="paxy">
+        <div class="container">
+            <!--移动端-->
+            <div id="m_main">
+                <div class="fullwidthbanner-container">
+                    <div class="fullwidthbanner">
+                        <ul id="m_img_link">
+                            {if isset($threadlist['safe'])}
+                            {volist name="threadlist.safe" id="t"}
+                            <li data-transition="slideright">
+                                <img src="{$t.coverimg}" alt="" />
+                                <div class="m_img_cover"></div>
+                            </li>
+                            {/volist}
+                            {/if}
+                        </ul>
+                        <div class="tp-bannertimer tp-bottom"></div>
+                    </div>
+                </div>
+                <section id="testiomonial" class="testimonial">
+                    <div class="main_testimonial_area">
+                        <div class="overlay"></div>
+                        <div class="information-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="head_title m-y-3 p-t-2  wow fadeInUp">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h2>安全动态</h2>
+                                            </div>
+                                            <div class="col-md-8">
+                                                    {if isset($threadlist['safe'])}
+                                                    <?php $safenum = 0; ?>
+                                                    {volist name="threadlist.safe" id="t"}
+                                                    {if $safenum<=6 && $t['coverimg']=='/static/img/common/no-img-1.svg' } <?php
+                                                        $safenum +=1 ; ?>
+                                                <div class="messageItem">
+                                                    <div class="messageItem_date"><span class="span-1">24</span><span
+                                                            class="span-2">2018.12</span></div>
+                                                    <div class="messageItem_msg" style=""><a style="color:#fff;font-size: 20px"
+                                                            href="/threads/view?id={$t.id}&from=16">{$t.title}</a></div>
+                                                    <h6>详情点击查看</h6>
+                                                </div>
+                                                {/if}
                                         {/volist}
+                                        {/if}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial_content text-center p-y-3 m-b-3">
+                                        <div class="test_slider">
+                                            <div class="single_test">
+                                                <a href="#" style="color: #ebdcdc">查看更多</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="paEating">
+                <div class="paEating">
+                    <div class="leftBox">
+                        <div class="leftColumnName">
+                            <a>饮食卫生></a>
+                        </div>
+                        <div class="leftColumnContent">
+                            <div class="leftCardBox">
+                                {if isset($threadlist['food'])}
+                                {volist name="threadlist.food" id="t" offset="0" length="2"}
+                                <div class="leftCardItem">
+                                    <a href="/threads/view?id={$t.id}&from=16" class="CardCoverimg"><img src="{$t.coverimg}"
+                                            alt=""></a>
+                                    <div class="CardIntro">
+                                        <a href="/threads/view?id={$t.id}&from=16" class="Intro_tit">{$t.title}</a>
+                                        <a href="/threads/view?id={$t.id}&from=16" class="Intro_des">{$t.descrip}</a>
+                                    </div>
+                                </div>
+                                {/volist}
+                                {/if}
+                            </div>
+                            <div class="leftCardBox">
+                                {if isset($threadlist['food'])}
+                                {volist name="threadlist.food" id="t" offset="2" length="2"}
+                                <div class="leftCardItem">
+                                    <a href="/threads/view?id={$t.id}&from=16" class="CardCoverimg"><img src="{$t.coverimg}"
+                                            alt=""></a>
+                                    <div class="CardIntro">
+                                        <a href="/threads/view?id={$t.id}&from=16" class="Intro_tit">{$t.title}</a>
+                                        <a href="/threads/view?id={$t.id}&from=16" class="Intro_des">{$t.descrip}</a>
+                                    </div>
+                                </div>
+                                {/volist}
+                                {/if}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightList">
+                        <div class="rightListBox" id="changeColumn-1">
+                            <div class="rightColumnName">
+                                <span class="ri-current">安全法规</span>
+                                <span>网络安全</span>
+                            </div>
+                            <div class="rightListContent">
+                                <ul style="display: block;">
+                                    {if isset($threadlist['rule'])}
+                                    {volist name="threadlist.rule" id="t" offset="0" length="10"}
+                                    <li><a href="/threads/view?id={$t.id}&from=16">{$t.title}</a></li>
+                                    {/volist}
                                     {/if}
                                 </ul>
-                                <script>
-                                $(document).ready(function() {
-                                    $('.sliderMain').lightSlider({
-                                        gallery: false,
-                                        item: 1,
-                                        slideMargin: 0,
-                                        speed: 1000,
-                                        pause: 5000,
-                                        auto: true,
-                                        loop: true,
-                                        mode: 'slide',
-                                    });
-                                    $('.lSPager').addClass('opacity');
-                                });
-                                </script>
-    						</div>
-    					</div>
-    					<div class="rightList">
-    						<div class="rightListBox">
-    							<div class="rightColumnName">
-									<a>安全动态</a>
-								</div>
-								<div class="rightListContent">
-									<ul>
-                                        {if isset($threadlist['safe'])}
-                                        <?php $safenum = 0; ?>
-                                        {volist name="threadlist.safe" id="t"}
-                                            {if $safenum<=6 && $t['coverimg'] == '/static/img/common/no-img-1.svg'}
-                                                <?php $safenum += 1 ; ?>
-                                                <li><a href="/threads/view?id={$t.id}&from=16">{$t.title}</a></li>
-                                            {/if}
-                                        {/volist}
-                                        {/if}
-									</ul>
-								</div>
-    						</div>
-    					</div>
-    				</div>
-    			</section>
-    			<section class="paEating">
-    				<div class="paEating">
-    					<div class="leftBox">
-                            <div class="leftColumnName">
-                                <a>饮食卫生></a>
-                            </div>
-                            <div class="leftColumnContent">
-                                <div class="leftCardBox">
-                                    {if isset($threadlist['food'])}
-                                    {volist name="threadlist.food" id="t" offset="0" length="2"}
-                                    <div class="leftCardItem">
-                                        <a href="/threads/view?id={$t.id}&from=16" class="CardCoverimg"><img src="{$t.coverimg}" alt=""></a>
-                                        <div class="CardIntro">
-                                            <a href="/threads/view?id={$t.id}&from=16" class="Intro_tit">{$t.title}</a>
-                                            <a href="/threads/view?id={$t.id}&from=16" class="Intro_des">{$t.descrip}</a>
-                                        </div>
-                                    </div>
+                                <ul style="display: none;">
+                                    {if isset($threadlist['web'])}
+                                    {volist name="threadlist.web" id="t" offset="0" length="10"}
+                                    <li><a href="/threads/view?id={$t.id}&from=16">{$t.title}</a></li>
                                     {/volist}
                                     {/if}
-                                </div>
-                                <div class="leftCardBox">
-                                    {if isset($threadlist['food'])}
-                                    {volist name="threadlist.food" id="t" offset="2" length="2"}
-                                    <div class="leftCardItem">
-                                        <a href="/threads/view?id={$t.id}&from=16" class="CardCoverimg"><img src="{$t.coverimg}" alt=""></a>
-                                        <div class="CardIntro">
-                                            <a href="/threads/view?id={$t.id}&from=16" class="Intro_tit">{$t.title}</a>
-                                            <a href="/threads/view?id={$t.id}&from=16" class="Intro_des">{$t.descrip}</a>
-                                        </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="paTransporting">
+                <div class="paTransporting">
+                    <div class="leftBox">
+                        <div class="leftColumnName">
+                            <a>交通旅行></a>
+                        </div>
+                        <div class="leftColumnContent">
+                            <div class="leftCardBox">
+                                {if isset($threadlist['translation'])}
+                                {volist name="threadlist.translation" id="t" offset="0" length="2"}
+                                <div class="leftCardItem">
+                                    <a href="/threads/view?id={$t.id}&from=16" class="CardCoverimg"><img src="{$t.coverimg}"
+                                            alt=""></a>
+                                    <div class="CardIntro">
+                                        <a href="/threads/view?id={$t.id}&from=16" class="Intro_tit">{$t.title}</a>
+                                        <a href="/threads/view?id={$t.id}&from=16" class="Intro_des">{$t.descrip}</a>
                                     </div>
+                                </div>
+                                {/volist}
+                                {/if}
+                            </div>
+                            <div class="leftCardBox">
+                                {if isset($threadlist['translation'])}
+                                {volist name="threadlist.translation" id="t" offset="2" length="2"}
+                                <div class="leftCardItem">
+                                    <a href="/threads/view?id={$t.id}&from=16" class="CardCoverimg"><img src="{$t.coverimg}"
+                                            alt=""></a>
+                                    <div class="CardIntro">
+                                        <a href="/threads/view?id={$t.id}&from=16" class="Intro_tit">{$t.title}</a>
+                                        <a href="/threads/view?id={$t.id}&from=16" class="Intro_des">{$t.descrip}</a>
+                                    </div>
+                                </div>
+                                {/volist}
+                                {/if}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightList">
+                        <div class="rightListBox" id="changeColumn-2">
+                            <div class="rightColumnName">
+                                <span class="ri-current">消防演练</span>
+                                <span>自救自护</span>
+                            </div>
+                            <div class="rightListContent">
+                                <ul style="display: block;">
+                                    {if isset($threadlist['fire'])}
+                                    {volist name="threadlist.fire" id="t" offset="0" length="10"}
+                                    <li><a href="/threads/view?id={$t.id}&from=16">{$t.title}</a></li>
                                     {/volist}
                                     {/if}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rightList">
-                            <div class="rightListBox" id="changeColumn-1">
-                                <div class="rightColumnName">
-                                    <span class="ri-current">安全法规</span>
-                                    <span>网络安全</span>
-                                </div>
-                                <div class="rightListContent">
-                                    <ul style="display: block;">
-                                        {if isset($threadlist['rule'])}
-                                        {volist name="threadlist.rule" id="t" offset="0" length="10"}
-                                        <li><a href="/threads/view?id={$t.id}&from=16">{$t.title}</a></li>
-                                        {/volist}
-                                        {/if}
-                                    </ul>
-                                    <ul style="display: none;">
-                                        {if isset($threadlist['web'])}
-                                        {volist name="threadlist.web" id="t" offset="0" length="10"}
-                                        <li><a href="/threads/view?id={$t.id}&from=16">{$t.title}</a></li>
-                                        {/volist}
-                                        {/if}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-    				</div>
-    			</section>
-    			<section class="paTransporting">
-    				<div class="paTransporting">
-    					<div class="leftBox">
-                            <div class="leftColumnName">
-                                <a>交通旅行></a>
-                            </div>
-                            <div class="leftColumnContent">
-                                <div class="leftCardBox">
-                                    {if isset($threadlist['translation'])}
-                                    {volist name="threadlist.translation" id="t" offset="0" length="2"}
-                                    <div class="leftCardItem">
-                                        <a href="/threads/view?id={$t.id}&from=16" class="CardCoverimg"><img src="{$t.coverimg}" alt=""></a>
-                                        <div class="CardIntro">
-                                            <a href="/threads/view?id={$t.id}&from=16" class="Intro_tit">{$t.title}</a>
-                                            <a href="/threads/view?id={$t.id}&from=16" class="Intro_des">{$t.descrip}</a>
-                                        </div>
-                                    </div>
+                                </ul>
+                                <ul style="display: none;">
+                                    {if isset($threadlist['selfsave'])}
+                                    {volist name="threadlist.selfsave" id="t" offset="0" length="10"}
+                                    <li><a href="/threads/view?id={$t.id}&from=16">{$t.title}</a></li>
                                     {/volist}
                                     {/if}
-                                </div>
-                                <div class="leftCardBox">
-                                    {if isset($threadlist['translation'])}
-                                    {volist name="threadlist.translation" id="t" offset="2" length="2"}
-                                    <div class="leftCardItem">
-                                        <a href="/threads/view?id={$t.id}&from=16" class="CardCoverimg"><img src="{$t.coverimg}" alt=""></a>
-                                        <div class="CardIntro">
-                                            <a href="/threads/view?id={$t.id}&from=16" class="Intro_tit">{$t.title}</a>
-                                            <a href="/threads/view?id={$t.id}&from=16" class="Intro_des">{$t.descrip}</a>
-                                        </div>
-                                    </div>
-                                    {/volist}
-                                    {/if}
-                                </div>
+                                </ul>
                             </div>
                         </div>
-                        <div class="rightList">
-                            <div class="rightListBox" id="changeColumn-2">
-                                <div class="rightColumnName">
-                                    <span class="ri-current">消防演练</span>
-                                    <span>自救自护</span>
-                                </div>
-                                <div class="rightListContent">
-                                    <ul style="display: block;">
-                                        {if isset($threadlist['fire'])}
-                                        {volist name="threadlist.fire" id="t" offset="0" length="10"}
-                                        <li><a href="/threads/view?id={$t.id}&from=16">{$t.title}</a></li>
-                                        {/volist}
-                                        {/if}
-                                    </ul>
-                                    <ul style="display: none;">
-                                        {if isset($threadlist['selfsave'])}
-                                        {volist name="threadlist.selfsave" id="t" offset="0" length="10"}
-                                        <li><a href="/threads/view?id={$t.id}&from=16">{$t.title}</a></li>
-                                        {/volist}
-                                        {/if}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-    				</div>
-    			</section>
-    		</div>
-    	</div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
-    <script>
-	    window.onload = function() {
-	        var xySliderChange__1 = document.getElementById('changeColumn-1');
-	        var xySliderChange_1_Span = xySliderChange__1.getElementsByTagName('span');
-	        var xySliderChange_1_Ul = xySliderChange__1.getElementsByTagName('ul');
-	        var xySliderChange__2 = document.getElementById('changeColumn-2');
-	        var xySliderChange_2_Span = xySliderChange__2.getElementsByTagName('span');
-	        var xySliderChange_2_Ul = xySliderChange__2.getElementsByTagName('ul');
+</div>
+<script type="text/javascript" src="{$Think.const.STATIC_ROOT}/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="{$Think.const.STATIC_ROOT}/js/jquery.themepunch.plugins.min.js"></script>
+<script>
+    //清泽专题轮播图
+    $(document).ready(function () {
+        if ($.fn.cssOriginal != undefined)
+            $.fn.css = $.fn.cssOriginal;
+        $('.fullwidthbanner').revolution({
+            delay: 9000,
+            startwidth: 1170,
+            startheight: 420,
+            onHoverStop: "on",
+            navigationType: "none",
+            soloArrowLeftHOffset: 0,
+            soloArrowLeftVOffset: 0,
+            soloArrowRightHOffset: 0,
+            soloArrowRightVOffset: 0,
+            touchenabled: "on",
+            fullWidth: "on",
+            shadow: 0
+        });
+    });
+    //]]>
+</script>
+<script>
+    window.onload = function () {
+        var xySliderChange__1 = document.getElementById('changeColumn-1');
+        var xySliderChange_1_Span = xySliderChange__1.getElementsByTagName('span');
+        var xySliderChange_1_Ul = xySliderChange__1.getElementsByTagName('ul');
+        var xySliderChange__2 = document.getElementById('changeColumn-2');
+        var xySliderChange_2_Span = xySliderChange__2.getElementsByTagName('span');
+        var xySliderChange_2_Ul = xySliderChange__2.getElementsByTagName('ul');
 
-	        function changeColumn(arrSpan, arrUl) {
-	            for (var i = 0; i < arrSpan.length; i++) {
-	                arrSpan[i].index = i;
-	                arrSpan[i].onclick = function() {
-	                    for (var j = 0; j < arrSpan.length; j++) {
-	                        arrSpan[j].className = '';
-	                        arrUl[j].style.display = 'none';
-	                    }
-	                    this.className = 'ri-current';
-	                    arrUl[this.index].style.display = 'block';
-	                }
-	            }
-	        }
-	        changeColumn(xySliderChange_1_Span, xySliderChange_1_Ul);
-	        changeColumn(xySliderChange_2_Span, xySliderChange_2_Ul);
-	    }
-    </script>
+        function changeColumn(arrSpan, arrUl) {
+            for (var i = 0; i < arrSpan.length; i++) {
+                arrSpan[i].index = i;
+                arrSpan[i].onclick = function () {
+                    for (var j = 0; j < arrSpan.length; j++) {
+                        arrSpan[j].className = '';
+                        arrUl[j].style.display = 'none';
+                    }
+                    this.className = 'ri-current';
+                    arrUl[this.index].style.display = 'block';
+                }
+            }
+        }
+        changeColumn(xySliderChange_1_Span, xySliderChange_1_Ul);
+        changeColumn(xySliderChange_2_Span, xySliderChange_2_Ul);
+    }
+</script>
 {/block}
