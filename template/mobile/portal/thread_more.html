@@ -1,9 +1,10 @@
-{extend name="default/portal/frame" /}
+{extend name="moblie/portal/frame" /}
 
 {block name="style"}
-    {include file="default/portal/common_ext_bn" /}
-    {include file="default/portal/common_ext_style" /}
+    {include file="moblie/portal/common_ext_bn" /}
+    {include file="moblie/portal/common_ext_style" /}
     <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/search/main.css"/>
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/mobile/m_portal/m-more.css"/>
     <style>.morePage .searchResult {display: none;}</style>
 {/block}
 
@@ -37,23 +38,6 @@
                         background: #f9f9f9;
                     ">该区域还未被探索。。。</div>
                     {/if}
-                </div>
-                <div class="listRight clearfloat">
-                    <div class="listRightHead">
-                        <h2>最新发布</h2>
-                        <a href="#" class="formore">更多</a>
-                    </div>
-                    <div class="listRightContent">
-                        {volist name="new" id="new"}
-                        <div class="listRightItem">
-                            <a href="/threads/view?id={$new['id']}{if isset($_GET['from'])}&from={$_GET['from']}{/if}" class="listRightItem__coverimg"><img src="{$new['coverimg']}" alt=""></a>
-                            <div class="listRightItem__content">
-                                <a href="/threads/view?id={$new['id']}{if isset($_GET['from'])}&from={$_GET['from']}{/if}" class="listRightItem__tit">{$new['title']}</a>
-                                <span class="listRightItem__date">{$new['time']}</span>
-                            </div>
-                        </div>
-                        {/volist}
-                    </div>
                 </div>
                 {$multipage}
             </div>

@@ -1,9 +1,11 @@
-{extend name="default/portal/frame" /}
+{extend name="mobile/portal/frame" /}
 
 {block name="style"}
-    {include file="default/portal/common_ext_style" /}
+    {include file="mobile/portal/common_ext_style" /}
     {if isset($extcss)}<link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/portal/{$extcss}.css"/>{/if}
-    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/portal/common_article.css"/>
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/portal/common_article.css" />
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/mobile/m_home/m__rdnm__common.css">
 {/block}
 
 {block name="js"}
@@ -11,53 +13,46 @@
 {/block}
 
 {block name="body"}
-    <!--div class="banner">
-        <div class="bannerImgBox">
-            <img src="{$Think.const.STATIC_ROOT}/img/portal/rdnm/rdnm__banner.png"/>
+<!--移动端文章样式-->
+<div class="m-background">
+    <div class="m-common">
+        <div class="m-header1">
+            <p style="font-size: 14px;color: #605b5b"><a href="http://qzxy.tyut.ued.cn" style="color: #605b5b">首页</a>-新闻-内容</p>
         </div>
-    </div-->
-    <section class="o__main">
-        <div class="o__main">
-            <div class="container">
-                <div class="listContent">
-                    <div class="listContentItem">
-                        <div class="article-header">
-                            <img class="listContentItem__coverimg" src="{$thread.coverimg}" alt="{$thread.title}">
-                            <div href="#" class="listContentItem__tit">
-                                <span class="title">{$thread.title}</span>
-                                <div class="listContentItem__info">
-                                    <span class="listContentItem__date">{$thread.time}</span>
-                                    <span class="listContentItem__read">阅读量：{$thread.view}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="listContentItem__content">
-                            <div class="listContentItem__msg">
-                                <div class="msg__container">
-                                    <div>{$thread.content}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="listRight clearfloat">
-                    <div class="listRightHead">
-                        <h2>最新发布</h2>
-                    </div>
-                    <div class="listRightContent">
-                        {volist name="new" id="new"}
-                        <div class="listRightItem">
-                            <a href="/threads/view?id={$new.id}" class="listRightItem__coverimg"><img src="{$new.coverimg}" alt="{$new.descrip}"></a>
-                            <div class="listRightItem__content">
-                                <a href="/threads/view?id={$new.id}" class="listRightItem__tit">{$new.title}</a>
-                                <span class="listRightItem__date">{$new.time}</span>
-                            </div>
-                        </div>
-                        {/volist}
-                    </div>
-                </div>
+        <div class="m-header">
+            <p style="font-size: 26px;color: #3f3d3d;font-weight: bold ">
+                {$thread.title}
+        </div>
+        <div class="m-icon1">
+            <div class="m-icon2"><i class="fa fa fa-clock-o fa-rotate-90"></i>
+                <span style="color: #605b5b;font-size: 14px;margin-left:10px">{$thread.time}</span></div>
+            <div class="m-icon3">
+                <img src="{$Think.const.STATIC_ROOT}/img/portal/readeye.png" class="m-eye">
+                <span style="color: #605b5b;font-size: 14px">&nbsp;&nbsp;{$thread.view}&nbsp;&nbsp;</span>
+                <i class="fa fa-heart-o heart"></i>
+                <span style="color: #605b5b;font-size: 14px">&nbsp;&nbsp;344</span>
             </div>
         </div>
-    </section>
+        <div class="ArticleImg">{$thread.content}</div>
+        <button class="m-icon5" id="m-love" style="border-radius: 20px;width: 60px;height: 35px;border: none;outline:none;background-color: #ede7e7; cursor: pointer;">
+            <i class=" fa fa-2x fa-heart-o" aria-hidden="true" id="r-love"></i>
+        </button>
+    </div>
+    <div class="m-bottom-rectangle"></div>
+</div>
+<script>
+    $(document).ready(function () {
+        //点击喜欢按钮变色
+        let count = 0;
+        $("#m-love").click(function () {
+            count++;
+            if (count % 2 == 1) {
+                $("#r-love").removeClass("fa-heart-o").addClass("fa-heart").css("color", "red");
+            } else {
+                $("#r-love").removeClass("fa-heart").addClass("fa-heart-o").css("color", "a7a2a2");
+            }
+        })
+    })
+</script>
 {/block}
 

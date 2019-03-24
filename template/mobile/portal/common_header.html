@@ -1,96 +1,146 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="keywords" content="{if isset($thread['keyword'])}{$thread.keyword}{/if} 清泽 清泽官网 清泽心雨 清泽心雨官网 qzxy qzxywebsite 太原理工大学 太原理工 太原理工-清泽心雨 太原理工大学-清泽心雨" />
-    <meta name="description" content="{if isset($thread['descrip'])}清泽资讯 - {$thread.descrip}{else}清泽心雨网站是太原理工大学思想政治教育主题网站,网站以“突出思想政治教育,保证及时准确报道,拓展学生服务活动”为方针,利用网络优势和资源特色,走个性化道路。{/if}" />
+    <meta name="keywords"
+        content="{if isset($thread['keyword'])}{$thread.keyword}{/if} 清泽 清泽官网 清泽心雨 清泽心雨官网 qzxy qzxywebsite 太原理工大学 太原理工 太原理工-清泽心雨 太原理工大学-清泽心雨" />
+    <meta name="description"
+        content="{if isset($thread['descrip'])}清泽资讯 - {$thread.descrip}{else}清泽心雨网站是太原理工大学思想政治教育主题网站,网站以“突出思想政治教育,保证及时准确报道,拓展学生服务活动”为方针,利用网络优势和资源特色,走个性化道路。{/if}" />
     <meta name="generator" content="StarsRiver" />
     <meta name="copyright" content="2017-2099 SR Inc." />
     <meta name="MSSmartTagsPreventParsing" content="True" />
     <!---link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/base.css"/-->
-    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/common.css"/>
-    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/fonts_zui.css"/>
-    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/portal/common_header.css"/>
-    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/portal/common_footer.css"/>
-    <title>{if isset($title)}{$title}{elseif isset($thread['title'])}清泽心雨 - {$thread.title}{else}太原理工大学 - 清泽心雨{/if}</title>
-    {include file="default/common/eccens_js"}
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/fonts_zui.css" />
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/portal/common_header.css" />
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/portal/common_footer.css" />
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/mobile/m_home/m_header.css">
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/mobile/m_home/m_footer.css">
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/font-awesome.min.css">
+    <title>{if isset($title)}{$title}{elseif isset($thread['title'])}清泽心雨 - {$thread.title}{else}太原理工大学 - 清泽心雨{/if}
+    </title>
+    {include file="mobile/common/eccens_js"}
 </head>
+
 <body>
     <div class="header">
-        <div class="container">
-            <div class="empty"></div>
-            <a href="/portal" class="logo clearfloat">
-                <img src="{$Think.const.STATIC_ROOT}/img/common/logoo.png" alt="logo">
-            </a>
-            <div class="mobile__nav">
-                <span></span>
-            </div>
-            <input class="mobile__nav" type="checkbox" id="mobileNav"/>
-            <ul class="nav clearfloat" id="nav">
-                {volist name="base.mainnav" id="nav"}
-                {if !$nav['bel']}
-                <li>
-                    <a target="{if $nav['blank']}{/if}" href="{$nav.url}">{$nav.name}</a>
-                    <input class="mobile__subnav" type="checkbox" />
-                    <div class="subnav">
-                        {volist name="base.mainnav" id="snav"}
-                        {if $snav['bel'] == $nav['id']}
-                        <a target="{if $snav['blank']}_blank{/if}" href="{$snav.url}">{$snav.name}</a>
-                        {/if}
-                        {/volist}
-                    </div>
-                </li>
-                {/if}
-                {/volist}
-            </ul>
-            <!--[if lte IE 8]>
-            <script type="text/javascript">
-                var mobileNav = document.getElementById('mobileNav');
-                var headerNav = document.getElementById('nav');
-                boxShow(mobileNav, headerNav);
-                var mobileSubnav = headerNav.getElementsByTagName('input');
-                var headerSubnav = [];
-                for (var i = 0; i < mobileSubnav.length; i++) {
-                    var __Subnav = mobileSubnav[i].nextSibling.nextSibling;
-                    headerSubnav.push(__Subnav);
-                }
-                boxArrShow(mobileSubnav, headerSubnav);
-                function boxShow(btn, box) {
-                    btn.onclick = function() {
-                        //display = block针对于mobileNav,height和overflow针对的是Subnav,但是我这样写会同时给他们俩都加上这些属性,不过不影响效果
-                        if(box.style.display !== 'block') {
-                            box.style.display = 'block';
-                        } else {
-                            box.style.display = 'none';
-                        }
-                        if(box.style.height !== 'auto' && box.style.overflow !== 'visible') {
-                            box.style.height = 'auto';
-                            box.style.overflow = 'visible';
-                        } else {
-                            box.style.height = '0';
-                            box.style.overflow = 'hidden';
-                        }
-                    }
-                }
-                function boxArrShow(btnArr, boxArr) {
-                    if (btnArr.length !== boxArr.length) return false;
-                    for (var j = 0; j < btnArr.length; j++) {
-                        boxShow(btnArr[j], boxArr[j]);
-                    }
-                }
-            </script>
-            <![endif]-->
-            <div class="searchBox clearfloat">
-                <div class="qzSearch">
-                    <input placeholder="请输入要搜索的内容">
-                    <span onclick="if(this.parentNode.querySelector('input').value)window.open('/search?keyword=' + this.parentNode.querySelector('input').value)"></span>
-                </div>
-                <div class="searchMenu">
-                    {volist name="base.searchnav" id="nav" length="5"}
-                    <a target="{if $nav['blank']}_blank{/if}" href="{$nav.url}">{$nav.name}</a>
+        <!--移动端侧边栏-->
+        <div id="wrapper">
+            <div><a href="/portal" class="logo clearfloat"><img src="{$Think.const.STATIC_ROOT}/img/common/m-logo.png"
+                        alt="logo"></a></div>
+            <div class="overlay"></div>
+            <!-- 导航内容 -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="/portal">清泽心雨</a>
+                    </li>
+                    {volist name="base.mainnav" id="nav"}
+                    {if !$nav['bel']}
+                    <li class="nav-list">
+                        <a target="{if $nav['blank']}{/if}" href="{$nav.url}" class="fa fa-bookmark-o" aria-hidden="true">{$nav.name}</a>
+                        <ul>
+                            {volist name="base.mainnav" id="snav"}
+                            {if $snav['bel'] == $nav['id']}
+                            <li id="t_nav"><a target="{if $snav['blank']}_blank{/if}"
+                                    href="{$snav.url}">{$snav.name}</a></li>
+                            {/if}
+                            {/volist}
+                        </ul>
+                    </li>
+                    {/if}
                     {/volist}
-                </div>
+                    <!-- <li class="nav-list">
+                        <a href="#" id="nav-open"><i class="fa fa-fw fa-flag"></i>清泽引领</a>
+                        <ul>
+                            <li id="t_nav"><a href="/portal/sztd.html">思政天地</a></li>
+                            <li id="t_nav"><a href="//qzxy.tyut.edu.cn/sydh/">生涯导航</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" id="nav-open"><i class="fa fa-fw fa-flask"></i>清泽学园</a>
+                        <ul>
+                            <li id="t_nav"><a href="/portal/xskj.html">学术科技</a></li>
+                            <li id="t_nav"><a href="/portal/gxyx.html">传统文化</a></li>
+                            <li id="t_nav"><a href="/portal/paxy.html">平安校园</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" id="nav-open"><i class="fa fa-fw fa-slideshare"></i>清泽服务</a>
+                        <ul>
+                            <li id="t_nav"><a href="//qzxy.tyut.edu.cn/qzxy/xszz/">学生资助</a></li>
+                            <li id="t_nav"><a href="//qgzx.tyut.edu.cn">勤工助学</a></li>
+                            <li id="t_nav"><a href="//jiuye.tyut.edu.cn/index.html">就业指导</a></li>
+                            <li id="t_nav"><a href="//jiuye.tyut.edu.cn/news/cyzdxx/index.html">创新创业</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" id="nav-open"><i class="fa fa-fw fa-bank"></i>清泽社区</a>
+                        <ul>
+                            <li id="t_nav"><a href="/portal/xygj.html">校园广角</a></li>
+                            <li id="t_nav"><a href="//weibo.com/tyutqzxy?refer_flag=1001030101_&is_all=1">清泽微博</a></li>
+                            <li id="t_nav"><a href="/static/img/common/wechat__hover.jpg">微信平台</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" id="nav-open"><i class="fa fa-fw fa-eye"></i>清泽视点</a>
+                        <ul>
+                            <li id="t_nav"><a href="/threads/more?cid=4">热点凝眸</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-list">
+                        <a href="/search" id="nav-open"><i class="fa fa-fw fa-search"></i>全站搜索</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 页面按钮 -->
+            <div id="page-content-wrapper">
+                <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+                    <span class="hamb-top"></span>
+                    <span class="hamb-middle"></span>
+                    <span class="hamb-bottom"></span>
+                </button>
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var trigger = $('.hamburger'),
+                overlay = $('.overlay'),
+                isClosed = false;
+
+            trigger.click(function () {
+                hamburger_cross();
+            });
+
+            function hamburger_cross() {
+
+                if (isClosed == true) {
+                    overlay.hide();
+                    trigger.removeClass('is-open');
+                    trigger.addClass('is-closed');
+                    isClosed = false;
+                } else {
+                    overlay.show();
+                    trigger.removeClass('is-closed');
+                    trigger.addClass('is-open');
+                    isClosed = true;
+                }
+            }
+
+            $('[data-toggle="offcanvas"]').click(function () {
+                $('#wrapper').toggleClass('toggled');
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".nav-list").click(function () {
+                $(this).children("ul").fadeToggle(500);
+            })
+        })
+    </script>
