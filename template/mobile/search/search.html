@@ -1,6 +1,7 @@
-{extend name="default/search/frame" /}
+{extend name="mobile/search/frame" /}
 {block name="style"}
 <link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/skin/search/main.css"/>
+<link rel="stylesheet" type="text/css" href="{$Think.const.STATIC_ROOT}/css/mobile/m_portal/m-more.css" />
 <style>
     em{
         color: #d53800;
@@ -41,23 +42,6 @@
                     </div>
                 </div>
                 {/volist}
-            </div>
-            <div class="listRight clearfloat">
-                <div class="listRightHead">
-                    <h2>最新发布</h2>
-                    <a href="#" class="formore">更多</a>
-                </div>
-                <div class="listRightContent">
-                    {volist name="new" id="new"}
-                    <div class="listRightItem">
-                        <a href="threads/view?id={$new['id']}" class="listRightItem__coverimg"><img src="{$new['coverimg']}" alt=""></a>
-                        <div class="listRightItem__content">
-                            <a href="threads/view?{$new['id']}" class="listRightItem__tit">{$new['title']}</a>
-                            <span class="listRightItem__date">{$new['time']}</span>
-                        </div>
-                    </div>
-                    {/volist}
-                </div>
             </div>
             {$multipage}
         </div>
