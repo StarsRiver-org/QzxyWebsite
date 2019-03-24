@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head >
-  <meta charset="UTF-8" >
-  <title >Title</title >
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="robots" content="noindex,nofollow" />
-</head >
-<body >
-  404
-</body >
-</html >
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{$Think.const.STATIC_ROOT}/css/error/m_404page.css">
+    <title>404,对不起，你访问的页面不存在</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="{$Think.const.STATIC_ROOT}/img/error/404page.png" alt="404page"/>
+        <p class="error-text">
+            抱歉，您访问的页面不存在，点此<a class="back" href="http://qzxy.tyut.edu.cn">返回首页</a>
+        </p>
+    </div>
+</body>
